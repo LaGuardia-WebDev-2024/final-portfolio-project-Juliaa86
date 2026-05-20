@@ -29,6 +29,87 @@ Select ONE Additional Feature to Add
       h1{
        text-align: center;
       }
+
+
+      .curtain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(180deg, #960000 0%, #7a0000 30%, #7f0000 55%, #500000 100%);
+  background-size: 100% 250%;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.curtain-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background: radial-gradient(circle at 12% 70%, rgba(255, 255, 255, 0.18), transparent 18%),
+              radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.16), transparent 18%),
+              radial-gradient(circle at 48% 70%, rgba(255, 255, 255, 0.18), transparent 18%),
+              radial-gradient(circle at 65% 70%, rgba(255, 255, 255, 0.16), transparent 18%),
+              radial-gradient(circle at 82% 70%, rgba(255, 255, 255, 0.18), transparent 18%);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.curtain-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 14%),
+                    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.06), transparent 16%);
+  background-size: 20px 100%, 100% 100%, 100% 100%;
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.left {
+  left: 0;
+  box-shadow: inset -20px 0 40px rgba(0, 0, 0, 0.65);
+}
+
+.right {
+  right: 0;
+  box-shadow: inset 20px 0 40px rgba(0, 0, 0, 0.65);
+}
+
+#open-curtain {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8b1f2f;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#open-curtain:hover {
+  background-color: #a2394d;
+  transform: translateY(-2px);
+}
+
     </style>
   </head>
   <body>
@@ -36,7 +117,7 @@ Select ONE Additional Feature to Add
     <ul>
       <li><a class="active" href="index.html">Home</a></li>
       <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="art.html">Art</a></li>
+      <li><a href="art.html">Experience</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li style="float: right">
         <a target="_blank" href=""
@@ -58,6 +139,32 @@ Select ONE Additional Feature to Add
     <h1><span>Julia Alban</span><br>Stage Manager</br></h1>
     <img src="images/HeartIcons.jpeg" width="400" height="400" style="display:block; margin: 0 auto;">
 
+<div class="curtain-container">
+  <div class="curtain-panel left"></div>
+  <div class="curtain-panel right"></div>
+</div>
+
+<button id="open-curtain">My Experiences</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+$(document).ready(function() {
+  $('#open-curtain').on('click', function() {
+    $(".curtain-container").css("opacity","1");
+    // Animate left panel to the left (-50% width)
+    $('.left').animate({ left: '-50%' }, 1500);
+
+    // Animate right panel to the right (move off-screen)
+    $('.right').animate({ right: '-50%' }, 1500, function() {
+       window.location.href = "art.html"
+    });
+  });
+});
+
+
+  </script>
 
   </body>
 </html>
