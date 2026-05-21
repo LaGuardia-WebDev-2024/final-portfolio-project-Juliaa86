@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Final Project - About Me</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      /* Styling Only Related To THIS Page */
+      .parent-flex {
+        display: flex;
+        background-color: purple;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 50px;
+      }
+
+      .parent-flex img {
+        width: 150px;
+        padding: 20px;
+      }
+      .child-flex p {
+        background-color: pink;
+        padding: 20px;
+        margin: 20px;
+      }
+      .image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 100px;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 16px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- ⬆⬆⬆⬆ Nav Bar -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a class="active" href="art.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li style="float: right">
+        <a target="_blank" href=""
+          ><img
+            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
+            style="width: 25px; margin: -5px"
+        /></a>
+      </li>
+      <li style="float: right">
+        <a target="_blank" href=""
+          ><img
+            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
+            style="width: 25px; margin: -5px"
+        /></a>
+      </li>
+    </ul>
+
+    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
+    <h1>Graduation Dance Showcase</h1>
+    <div class="image-grid">
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 1" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 2" />
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 3" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 4" />
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 5" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 6" />
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 7" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 8" />
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 9" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 10" />
+      <img src="images/HeartIcons.jpeg" alt="Graduation Dance image 11" />
+      <img src="images/VibeyTunes.png" alt="Graduation Dance image 12" />
+    </div>
+  </body>
+</html>
