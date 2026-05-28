@@ -6,23 +6,16 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
       /* Styling Only Related To THIS Page */
-      .parent-flex {
-        display: flex;
-        background-color: purple;
-        align-items: center;
-        justify-content: space-around;
-        margin-bottom: 50px;
-      }
+     .contain{
+      display:flex;
+      justify-content: space-around;
 
-      .parent-flex img {
-        width: 150px;
-        padding: 20px;
-      }
-      .child-flex p {
-        background-color: pink;
-        padding: 20px;
-        margin: 20px;
-      }
+     }
+
+     .photos img{
+      width:300px
+
+     }
     </style>
   </head>
   <body>
@@ -50,29 +43,16 @@
 
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
     <h1>About Me</h1>
-    <div class="parent-flex">
-      <div class="child-flex">
-        <img
-          src="images/HeartIcons.jpeg"
-        />
+    <div class="contain">
+      <img src= "images/HeartIcons.jpeg" alt="aboutme image 1" width="50%"/>
+      <p>lkjhlkjhlkjhlkjhlkjhlkjh</p>
+     </div>
+     <div class="contain photos">
+        <img src="images/VibeyTunes.png" alt="aboutme image 2" />
+        <img src="images/HeartIcons.jpeg" alt="aboutme image 3" />
+        <img src="images/VibeyTunes.png" alt="aboutme image 4" />
+        <img src="images/HeartIcons.jpeg" alt="aboutme image 5" />
+        <img src="images/VibeyTunes.png" alt="aboutme image 6" />
       </div>
-      <div class="child-flex">
-        <p>
-          L
-        </p>
-      </div>
-    </div>
-    <div class="parent-flex">
-      <div class="child-flex">
-        <p>
-          llllll
-        </p>
-      </div>
-      <div class="child-flex">
-        <img
-          src="images/VibeyTunes.png"
-        />
-      </div>
-    </div>
   </body>
 </html>
