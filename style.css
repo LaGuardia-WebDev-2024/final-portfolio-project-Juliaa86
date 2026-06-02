@@ -3,7 +3,31 @@
 body {
   padding-top: 30px;
   margin-left: 0px;
+  min-height: 100vh;
+  background-image: url("images/HeartIcons.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 140px;
+}
+
 /* ⬆⬆⬆⬆ Nav Bar Styling 
 ~~~~~ Taken From: 
 https://www.w3schools.com/css/css_navbar_horizontal.asp */
