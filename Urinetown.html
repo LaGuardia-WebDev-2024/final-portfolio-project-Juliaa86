@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Final Project - About Me</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
       /* Styling Only Related To THIS Page */
       body {
@@ -47,6 +48,19 @@
         object-fit: cover;
         border-radius: 12px;
       }
+      #ourB{
+  width: 40% !important;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid white;
+}
+
+#Demo1{
+  width: 40% !important;
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
+}
     </style>
   </head>
   <body>
@@ -74,6 +88,9 @@
 
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
     <h1>Urinetown</h1>
+    <button onclick="myFunction('Demo1')" id="ourB" class="w3-btn w3-block w3-black w3-center-align">Open Section 1 ⌄ </button>
+<div id="Demo1" class="w3-container w3-hide"> 
+  <p>Some text..</p></div>
     <div class="image-grid">
       <img src="UR1.jpg" alt="Urinetown image 1" />
       <img src="Urinetowncover.jpg" alt="Urinetown image 2" />
@@ -88,5 +105,15 @@
       <img src="UR10.jpg" alt="Urinetown image 11" />
       <img src="UR11.jpg" alt="Urinetown image 12" />
     </div>
+     <script>
+      function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
   </body>
 </html>

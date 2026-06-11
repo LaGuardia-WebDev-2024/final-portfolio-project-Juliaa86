@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Final Project - About Me</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
       /* Styling Only Related To THIS Page */
       body {
@@ -23,8 +24,8 @@
       }
 
       .parent-flex img {
-        width: 150px;
-        padding: 20px;
+        width: 150px !important;
+        padding: 20px !important;
       }
       .child-flex p {
         background-color: pink;
@@ -46,6 +47,19 @@
   display: block;
   object-fit: cover;
   border-radius: 12px;
+}
+#ourB{
+  width: 40% !important;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid white;
+}
+
+#Demo1{
+  width: 40% !important;
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
 }
     </style>
   </head>
@@ -73,7 +87,14 @@
     </ul>
 
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
+     <center>
     <h1>West Side Story</h1>
+  </center>
+     <button onclick="myFunction('Demo1')" id="ourB" class="w3-btn w3-block w3-black w3-center-align"> Production Team </button>
+<div id="Demo1" class="w3-container w3-hide">
+  <p>Director - Mala Maria Tsantilas <br> Choreographer - Felicity Stiverson <br>  Production Stage Manager - Sophie Allen <br> Scenic Designer - Adam Koch <br> Costume Design - Emily White <br> Lighting Design - Kat C. Zhou <br> Sound: Paul Howells
+  </p>
+  </div>
     <div class="image-grid">
       <img src="WSS1.jpg" alt="West Side Story image 1" />
       <img src="WSS2.jpeg" alt="West Side Story image 2" />
@@ -88,5 +109,15 @@
       <img src="WSS11.jpg" alt="West Side Story image 11" />
       <img src="WSS12.jpg" alt="West Side Story image 12" />
     </div>
+     <script>
+      function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
   </body>
 </html>
